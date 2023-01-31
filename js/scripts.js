@@ -1,3 +1,6 @@
+// // // //IIFE - Immediately Invoked Function Expression
+
+
 //List of Pokemon Characters
 let pokemonList = [ 
     { name: "Pikachu", height: 1.04, type: 'electric' },
@@ -8,11 +11,64 @@ let pokemonList = [
     { name: "Igglybuff", height: 1.01, type: ['Normal', 'Fairy']},    
 ]
 
-//loop displaying Pokemon Characters 
-for (let i = 0; i < pokemonList.length; i++) {        
-    if (pokemonList[i].height >= 7) {
-      document.write('<div class="card">' + '<p>' + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ") - Wow! that is a big pokemon!" +  '</p>' + '</div>');
-    } else if (pokemonList[i].height){
-      document.write("<div class='card'>" + "<p>" + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ")  " + "</p>" + "</div>") 
-    }
+
+pokemonList.forEach(function(pokemon){
+  if (pokemon.height >= 7){
+    document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ") - Wow! that is a big pokemon! "+ "</p>" + "</div>");
+  } else if (pokemon.height){
+    document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ")  " + "</p>" + "</div>") 
   }
+});
+
+// // Previous loop displaying Pokemon Characters 
+// for (let i = 0; i < pokemonList.length; i++) {        
+//   if (pokemonList[i].height >= 7) {
+//     document.write('<div class="card">' + '<p>' + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ") - Wow! that is a big pokemon!" +  '</p>' + '</div>');
+//   } else if (pokemonList[i].height){
+//     document.write("<div class='card'>" + "<p>" + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ")  " + "</p>" + "</div>") 
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
