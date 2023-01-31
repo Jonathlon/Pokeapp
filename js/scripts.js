@@ -1,5 +1,5 @@
-// // // //IIFE - Immediately Invoked Function Expression
-
+//IIFE - Immediately Invoked Function Expression
+let pokemonRepository = (function () {
 
 //List of Pokemon Characters
 let pokemonList = [ 
@@ -10,15 +10,31 @@ let pokemonList = [
     { name: "Dragonite", height: 7.03, type: ['dragon', 'flying']},
     { name: "Igglybuff", height: 1.01, type: ['Normal', 'Fairy']},    
 ]
+function add(pokemon) {
+  pokemonList.push(pokemon);
+}
+
+function getAll() {
+  return pokemonList;
+}
+
+return {
+  add: add,
+  getAll: getAll
+};
+})();
 
 
-pokemonList.forEach(function(pokemon){
+// forEach loop
+pokemonRepository.getAll().forEach(function(pokemon){
   if (pokemon.height >= 7){
     document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ") - Wow! that is a big pokemon! "+ "</p>" + "</div>");
   } else if (pokemon.height){
     document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ")  " + "</p>" + "</div>") 
   }
+
 });
+
 
 // // Previous loop displaying Pokemon Characters 
 // for (let i = 0; i < pokemonList.length; i++) {        
