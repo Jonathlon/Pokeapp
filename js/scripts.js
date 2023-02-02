@@ -18,32 +18,44 @@ function getAll() {
   return pokemonList;
 }
 
+function showDetail(pokemon){
+  console.log (pokemon)
+  // console.log (pokemon.name)
+  // console.log (pokemon.height)
+}
+
+function addListItem(pokemon){
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listPokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = pokemon.name + " " + "(Height" + " " + pokemon.height + ")" ; 
+  button.classList.add("button");  
+  listPokemon.appendChild(button);
+  pokemonList.appendChild(listPokemon);  
+  button.addEventListener('click', function () { 
+  showDetail(pokemon)
+});
+}
+
 return {
   add: add,
-  getAll: getAll
+  getAll: getAll,
+  addListItem: addListItem,
+  showDetail: showDetail,
 };
 })();
 
 
 // forEach loop
 pokemonRepository.getAll().forEach(function(pokemon){
-  if (pokemon.height >= 7){
-    document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ") - Wow! that is a big pokemon! "+ "</p>" + "</div>");
-  } else if (pokemon.height){
-    document.write("<div class='card'>" + "<p>" + pokemon.name + " " + "(Height:" + " " + pokemon.height + ")  " + "</p>" + "</div>") 
-  }
+pokemonRepository.addListItem(pokemon);
 
 });
 
 
-// // Previous loop displaying Pokemon Characters 
-// for (let i = 0; i < pokemonList.length; i++) {        
-//   if (pokemonList[i].height >= 7) {
-//     document.write('<div class="card">' + '<p>' + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ") - Wow! that is a big pokemon!" +  '</p>' + '</div>');
-//   } else if (pokemonList[i].height){
-//     document.write("<div class='card'>" + "<p>" + pokemonList[i].name + " " + "(Height:" + " " + pokemonList[i].height + ")  " + "</p>" + "</div>") 
-//   }
-// }
+
+
+
 
 
 
