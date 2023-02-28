@@ -1,5 +1,5 @@
 header {
-  text-align: center;
+  text-align: right;
   padding-bottom: 10px;
 }
 
@@ -8,9 +8,6 @@ body {
   padding-left: 100px;
   padding-right: 100px;
   background-image: url('/img/background.jpeg');
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
   font-family: 'comic neue', sans-serif;
 
 
@@ -20,19 +17,20 @@ h1 {
   font-size: 40px;
   font-weight: bold;
   color: rgb(0, 0, 0);
-  text-align: left;
+  text-align: center;
   padding-left: 120px;
 }
 
 h2 {
-  padding-top: 200px;
+  padding-top: 100px;
   text-align: center;
   background-color: #fff;
   opacity: 0.80;
-  width: 400px;
-  height: 400px;
+  width: auto;
+  height: 200px;
   border-radius: 20%;
   font-size: 20px;
+  
 }
 
 h3 {
@@ -54,9 +52,21 @@ li {
   list-style: none;
 }
 
-.button {
+.pokemon-list {
   list-style-type: none;
-  width: 400px;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1600px;  
+}
+
+.pokemon-button {
+  list-style-type: none;
+  width: 200px;
   height: 100px;
   border: 5px solid #fff;
   border-radius: 20%;
@@ -72,11 +82,11 @@ li {
 
 }
 
-.button:hover {
+.pokemon-button:hover {
   box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 4.0);
 }
-
-#modal-container {
+/* 
+ #modal-container {
   position: fixed;
   padding: 20px;
   box-sizing: border-box;
@@ -87,14 +97,11 @@ li {
   background: rgba(0, 0, 0, 0.5);
 
   z-index: 999; 
-  
-  /* to allow scrolling if the screen is not high enough*/
   overflow: auto; 
-  
-  /* this is used to center the modal */
   display: grid;
   text-align: center;
 }
+
 
 .modal {
   margin: auto;
@@ -117,7 +124,7 @@ li {
   background: none;
   color: #000000;
   text-decoration: underline;
-  padding-right: 40px;
+  padding-right: 80px;
 }
 
 .modal h1 {
@@ -133,9 +140,9 @@ li {
 }
 
 #modal-container.is-visible {
-  /* CSS for modal container - add your own desired CSS styles here */
+  
   display: block; 
-}
+}   */
 
 
 
