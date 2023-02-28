@@ -21,7 +21,7 @@ let pokemonRepository = (function () {
   // Creates List of pokemon buttons (not working)
   function addListItem(pokemon) {
     let pokemonList = $(".pokemon-list");
-    let listPokemon = $('<li class="group-list-item"></li>');
+    let listPokemon = $('<li class="list-group-item"></li>');
     let button = $('<button type="button" class="pokemon-button" data-toggle="modal" data-target="#pokeModal">' + pokemon.name + '</button>');
 
 
