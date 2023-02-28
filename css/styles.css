@@ -7,7 +7,7 @@ body {
   padding-top: 100px;
   padding-left: 100px;
   padding-right: 100px;
-  background-image: url("/img/background.jpeg");
+  background-image: url('../img/background.jpeg');
   font-family: 'comic neue', sans-serif;
 
 
