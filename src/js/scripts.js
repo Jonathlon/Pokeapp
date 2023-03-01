@@ -42,7 +42,7 @@ let pokemonRepository = (function () {
     modalBody.empty();
 
     let nameElement = $("<h1>" + item.name + "</h1>");
-    let heightElement = $("<p>" + "height :" + item.height + "</p>")
+    let heightElement = $("<p>" + "height :" + " "+ item.height  +"</p>")
     let imageElement = $('<img class="modal-img" style="width:50%">')
     imageElement.attr("src", item.imageUrl)
 
@@ -52,14 +52,14 @@ let pokemonRepository = (function () {
   }
 
 
-
+//Show details function
   function showDetails(pokemon) {
     loadDetails(pokemon).then(function () {
       showModal(pokemon);
     });
   }
 
-
+//Load list function fetches list from API using JSON
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -76,6 +76,7 @@ let pokemonRepository = (function () {
     })
   }
 
+  //Load details function fetches specfic data from API to be used in the show details function
   function loadDetails(item) {
     let url = item.detailsUrl;
     return fetch(url).then(function (response) {
