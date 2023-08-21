@@ -1,5 +1,10 @@
 Pokemon Index Application - Pokeapp
 
+![Screenshot 2023-08-21 at 13 28 10](https://github.com/Jonathlon/Pokeapp/assets/113617821/5b32fe87-b6bf-4897-994f-33c5618e59c9)
+
+
+
+
 This is a web application built with HTML, CSS, and JavaScript that loads
 data from an external API and enables the viewing of data points in detail.
 
